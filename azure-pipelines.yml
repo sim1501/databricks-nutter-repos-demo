@@ -100,6 +100,11 @@ stages:
   - job: onReleaseJob
     pool:
       vmImage: 'ubuntu-20.04'
+    variables:
+      DATABRICKS_HOST: https://adb-3141360387353935.15.azuredatabricks.net
+      DATABRICKS_TOKEN: dapi01f671ef7a7678b1f8ebffcc2ca6a319-3 
+      STAGING_DIRECTORY: /Repos/Staging/databricks-nutter-repos-demo
+      CLUSTER_ID: 1201-094548-lq9kmz6y
 
     steps:
       - script: env | sort
