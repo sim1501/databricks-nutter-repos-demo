@@ -51,7 +51,14 @@ stages:
     pool:
       vmImage: 'ubuntu-18.04'
     variables:
-          - group : 'VariableAzurePipeline'
+          - name : DATABRICKS_HOST
+            value: https://adb-3141360387353935.15.azuredatabricks.net
+          - name : DATABRICKS_TOKEN
+            value : dapi01f671ef7a7678b1f8ebffcc2ca6a319-3
+          - name : CLUSTER_ID
+            value : 1201-094548-lq9kmz6y
+          - name : STAGING_DIRECTORY
+            value : /Repos/Staging/databricks-nutter-repos-demo
   
     steps:
     - script: env | sort
@@ -105,7 +112,14 @@ stages:
     pool:
       vmImage: 'ubuntu-18.04'
     variables:
-      - group : 'VariableAzurePipeline'
+          - name : DATABRICKS_HOST
+            value: https://adb-3141360387353935.15.azuredatabricks.net
+          - name : DATABRICKS_TOKEN
+            value : dapi01f671ef7a7678b1f8ebffcc2ca6a319-3
+          - name : CLUSTER_ID
+            value : 1201-094548-lq9kmz6y
+          - name : STAGING_DIRECTORY
+            value : /Repos/Staging/databricks-nutter-repos-demo
 
     steps:
       - script: env | sort
